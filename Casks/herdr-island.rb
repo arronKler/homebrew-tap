@@ -1,6 +1,6 @@
 cask "herdr-island" do
-  version "0.3.0"
-  sha256 "4801d8f9faef0d90d97d40c45c93978ee582544e418b80ef21ef2ae7cdb4d57b"
+  version "0.2.2"
+  sha256 "dfed72084c2c547e96f7325623227b38499cc403de30229a82bf7dfebe573567"
 
   url "https://github.com/arronKler/herdr-island/releases/download/v#{version}/HerdrIsland-#{version}.zip"
   name "Herdr Island"
