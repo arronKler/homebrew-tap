@@ -19,6 +19,22 @@ cask "herdr-island" do
 
   uninstall quit: "local.herdr.island"
 
+  caveats <<~EOS
+    Herdr Island is ad-hoc signed and not notarized by Apple, so the first
+    launch needs one manual approval:
+
+      System Settings -> Privacy & Security -> Security -> "Open Anyway"
+
+    Updates come from the app's own signed updater. To force one through
+    Homebrew instead, run:
+
+      brew upgrade --cask arronKler/tap/herdr-island
+
+    Remove the app and its saved state with:
+
+      brew uninstall --cask --zap herdr-island
+  EOS
+
   zap trash: [
     "~/Library/Application Support/HerdrIsland",
     "~/Library/Caches/HerdrIsland",
