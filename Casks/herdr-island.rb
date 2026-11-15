@@ -38,6 +38,7 @@ cask "herdr-island" do
   zap trash: [
     "~/Library/Application Support/HerdrIsland",
     "~/Library/Caches/HerdrIsland",
+    "~/Library/Caches/local.herdr.island",
     "~/Library/Preferences/local.herdr.island.plist",
   ]
 end
