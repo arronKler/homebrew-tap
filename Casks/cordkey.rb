@@ -12,7 +12,7 @@ cask "cordkey" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "CordKey.app"
   binary "#{appdir}/CordKey.app/Contents/MacOS/CordKey", target: "cordkey"
