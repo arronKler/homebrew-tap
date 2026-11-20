@@ -6,7 +6,7 @@ macOS casks maintained by [@arronKler](https://github.com/arronKler).
 
 | Cask | Description | Install |
 | --- | --- | --- |
-| **CordKey** | Remap wired USB/HID & Bluetooth headset buttons to Mac keyboard shortcuts | `brew install --cask --no-quarantine arronKler/tap/cordkey` |
+| **CordKey** | Remap wired USB/HID & Bluetooth headset buttons to Mac keyboard shortcuts | `brew install --cask arronKler/tap/cordkey` |
 | **Herdr Island** | Notch island front end for the Herdr agent multiplexer | `brew install --cask arronKler/tap/herdr-island` |
 
 ---
@@ -16,10 +16,10 @@ macOS casks maintained by [@arronKler](https://github.com/arronKler).
 Install the universal macOS app (`CordKey.app` in `/Applications`) and the `cordkey` CLI:
 
 ```sh
-brew install --cask --no-quarantine arronKler/tap/cordkey
+brew install --cask arronKler/tap/cordkey
 ```
 
-> **Note**: CordKey is ad-hoc signed and not notarized by Apple. Passing `--no-quarantine` skips the first-launch Gatekeeper warning; without it, approve the first launch in **System Settings → Privacy & Security → Open Anyway**. Grant **Accessibility** permission when prompted so CordKey can emit keyboard shortcuts.
+> **Note**: CordKey is ad-hoc signed and not notarized by Apple, so the first launch needs one manual approval in **System Settings → Privacy & Security → Security → Open Anyway** (or `xattr -cr /Applications/CordKey.app && open /Applications/CordKey.app`). Grant **Accessibility** permission when prompted so CordKey can emit keyboard shortcuts.
 
 Upgrade or uninstall (with saved settings):
 

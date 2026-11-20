@@ -21,10 +21,14 @@ cask "cordkey" do
             launchctl: "io.github.cordkey.app"
 
   caveats <<~EOS
-    CordKey is ad-hoc signed and not notarized by Apple. If you installed
-    without --no-quarantine, approve the first launch in:
+    CordKey is ad-hoc signed and not notarized by Apple, so the first
+    launch needs one manual approval:
 
       System Settings -> Privacy & Security -> Security -> "Open Anyway"
+
+    Or clear quarantine from the terminal once:
+
+      xattr -cr /Applications/CordKey.app && open /Applications/CordKey.app
 
     Grant Accessibility permission when prompted so CordKey can emit
     keyboard shortcuts. The `cordkey` CLI is also linked in your PATH.
